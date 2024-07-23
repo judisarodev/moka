@@ -1,0 +1,51 @@
+.menu-container{
+    transition: height 0.3s;
+    overflow: hidden;
+}
+.main-menu {
+    color: white;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+.main-menu__icon{
+    animation: appear 0.3s ease;
+}
+@keyframes appear {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.main-menu p {
+    font-weight: 500;
+}
+.main-menu__item {
+    margin: 12px;
+    padding: 0px;
+}
+.main-menu__item > p {
+    font-weight: 100;
+    display: inline;
+    color: white;   
+    font-size: 1rem;
+}
+.drop-down--menu{
+    width: 100%;
+    background-color: #E08492;
+    animation: showup 0.3s linear;
+    margin-left: 22px;
+}
+@keyframes showup {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.nav-item > p {
+    color: white;
+    
+}
