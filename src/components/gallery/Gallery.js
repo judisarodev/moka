@@ -20,6 +20,10 @@ function Gallery({ title, text, typeId }) {
     useEffect(() => {
         fetch('http://167.88.39.191/api/client/get-random-cakes/'+typeId, {
             method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            referrerPolicy: 'strict-origin-when-cross-origin'
         })
         .then((response) => response.json())
         .then((data) => {
