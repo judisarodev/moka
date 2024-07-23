@@ -18,14 +18,14 @@ function Gallery({ title, text, typeId }) {
     const [ products, setProducts ] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8080/api/client/get-random-cakes/'+typeId, {
+        fetch('http://167.88.39.191/api/client/get-random-cakes/'+typeId, {
             method: 'GET',
         })
         .then((response) => response.json())
         .then((data) => {
             const arr = [];
             for(const d of data){
-                arr.push({ id: d.productId, image: 'http://localhost:8080/images/' + d.fileName});
+                arr.push({ id: d.productId, image: 'http://167.88.39.191/images/' + d.fileName});
             }
             console.log(products); 
             setProducts(arr);
