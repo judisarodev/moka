@@ -3,7 +3,9 @@
     padding: 30px;
 }
 .gallery__image{
-
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 .gallery__arrow{
     display: flex;
