@@ -16,7 +16,7 @@ section {
     justify-content: center;
     align-items: center;
 }
-.banner__text-box{   
+.banner .banner__text-box{   
     background-color: rgb(255, 214, 153, .9);
     max-width: 414px;
     height: 414px;
@@ -24,7 +24,7 @@ section {
     border-radius: 50%;
     padding: 10px;
 }
-.banner__text-box h1 {
+.banner .banner__text-box h1 {
     font-family: 'Playfair', serif;
     font-size: 2rem;
     font-weight: 300;
