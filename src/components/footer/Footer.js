@@ -7,9 +7,9 @@ import './footer.css';
 function Footer(){
     return(
         <footer className="footer d-flex flex-column gap-3">
-            <FooterItem icon={<FaRegCopyright size={20}/>} text={'copyright'}/>
+            <FooterItem icon={<FaRegCopyright size={20}/>} text={'Copyright. Moka, marca registrada'}/>
             <FooterItem icon={<FaInstagram size={20} />} text={'@moka-bga'}/>
-            <FooterItem icon={<FaPhoneAlt size={20} />} text={'316 777 7777'}/>
+            <FooterItem icon={<FaPhoneAlt size={20} />} text={'+57 302 7343613'}/>
         </footer>
     );
 }
