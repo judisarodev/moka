@@ -10,56 +10,18 @@ import { CardComponent } from "../card/CardComponent";
 
 const Products = () => {
     const [selectedCategory, setSelectedCategory] = useState('');
-    const [categories, setCategories] = useState([
-      {
-        id: 0,
-        name: 'Todas las categorías'
-      }
-    ]);
+    const [categories, setCategories] = useState([]);
 
     const [cakes, setCakes] = useState([]);
 
     useEffect(() => {
-        async function fetchCategories(){
-            try {
-                let url = 'https://backend.mokatortas.com/api/client/get-all-product-types';
-                if(selectedCategory.typeId !== 0){
-                    url = 'https://backend.mokatortas.com/api/client/get-all-product-types/' + selectedCategory.typeId;
-                }
-                const response = await fetch(url, {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                });
-                const data = await response.json();
-                setCategories(data);
-            } catch (error) {
-                console.error('Error fetching categories:', error);
-            }
-        }
-        fetchCategories(); 
-    }, [selectedCategory]);
-
-    useEffect(() => {
-        async function fetchCategories(){
-            try {
-                const response = await fetch('https://backend.mokatortas.com/api/client/get-all-product-types', {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                });
-                const data = await response.json();
-                setCategories(data);
-            } catch (error) {
-                console.error('Error fetching categories:', error);
-            }
-        }
-
         async function fetchCakes(){
             try {
-                const response = await fetch('https://backend.mokatortas.com/api/client/get-all-products', {
+                let url = 'https://backend.mokatortas.com/api/client/get-all-products';
+                if(selectedCategory.typeId && selectedCategory.typeId !== 0){
+                    url = 'https://backend.mokatortas.com/api/client/get-all-products/' + selectedCategory.typeId;
+                }
+                const response = await fetch(url, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json'
@@ -73,8 +35,27 @@ const Products = () => {
             }
         }
 
-        fetchCategories(); 
         fetchCakes();
+    }, [selectedCategory]);
+
+    useEffect(() => {
+        async function fetchCategories(){
+            try {
+                const response = await fetch('https://backend.mokatortas.com/api/client/get-all-product-types', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                const data = await response.json();
+                setCategories(data);
+                console.log(data); 
+            } catch (error) {
+                console.error('Error fetching categories:', error);
+            }
+        }
+
+        fetchCategories(); 
     }, []);
 
     return(<>
