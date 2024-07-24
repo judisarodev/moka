@@ -6,13 +6,15 @@ import { Text } from "../text/Text";
 import { Footer } from "../footer/Footer";
 import { Dropdown } from 'primereact/dropdown';
 import { CardComponent } from "../card/CardComponent";
+import { Detail } from "../detail/Detail";
 
 
 const Products = () => {
     const [selectedCategory, setSelectedCategory] = useState('');
     const [categories, setCategories] = useState([]);
-
+    const [selectedProduct, setSelectedProduct] = useState(null);
     const [cakes, setCakes] = useState([]);
+    const [visible, setVisibility] = useState(false);
 
     useEffect(() => {
         async function fetchCakes(){
@@ -78,11 +80,13 @@ const Products = () => {
                 <div className="article products__cards-container">
                     {
                         cakes.map((cake) => {
-                            return <CardComponent title={cake.name} url={cake.fileName} />
+                            return <CardComponent productId={cake.productId} title={cake.name} url={cake.fileName} setSelectedProduct={setSelectedProduct} />
                         })
                     }
                 </div>
             </section>
+
+            <Detail productId={selectedProduct} visible={visible} setVisibility={setVisibility} />
 
         </Container>     
         <Footer />   
