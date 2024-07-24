@@ -42,8 +42,8 @@ const About = () => {
 
     return(<>
         <Container>
-            <div className="products__banner">
-                <div className="banner__text-box d-flex flex-column justify-content-center  ">
+            <div className="about__banner">
+                <div className="banner__text-box d-flex flex-column justify-content-center">
                     <h1>Sobre nosotros</h1>
                     <p>Nos apasiona lo que hacemos, endulzar tus momentos especiales es nuestro propósito</p>
                 </div>
