@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap; 
 }
 .detail__image-container{
     display: flex;
