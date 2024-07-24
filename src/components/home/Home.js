@@ -7,6 +7,7 @@ import { ListItem } from "../list-item/ListItem";
 import { Gallery } from "../gallery/Gallery";
 import { WhatsappButton } from '../whatsapp-button/WhatsappButton';
 import { Footer } from '../footer/Footer';
+import logo from './../../assets/marca/logo.png';
 
 function Home(){
 
@@ -16,11 +17,15 @@ function Home(){
         { index: '3', text: 'Disfruta de Moka con quienes más amas y aprecias' }
     ];
 
+    const text = 'Hola, Moka, estoy interesado en una torta personalizada www.mokatortas.com';
+
     return(
         <Container>
-            <div className="banner">
-                <div className="banner__text-box d-flex flex-column justify-content-center  ">
-                    <h1>Tortas personalizadas en Bucaramanga</h1>
+            <div className="banner" >
+                <div className="banner__text-box">
+                    <a href={`https://wa.me/573027343613?text=${text}`} target="_blank" rel="noreferrer">
+                        <img src={logo} alt='logo' className='banner__logo'/>
+                    </a>
                 </div>
             </div>
 
@@ -30,6 +35,7 @@ function Home(){
                 ¡Bienvenidos a Moka! Donde la magia se mezcla con la harina, creamos delicias que te harán sonreír.
                 En Moka, cada bocado cuenta una historia de amor. 
                 </Text>
+                
                 <br></br>
                 <ul className='p-0'>
                     {listItems.map((i) => {

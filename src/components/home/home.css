@@ -12,14 +12,32 @@ section {
     height: 90vh;
 
     display: flex;
+    
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+@keyframes logo-animation {
+    from {
+        scale: 1;
+    }
+    to {
+        scale: 1.1;
+    }
+}
+.banner__text-box:hover{
+    cursor: pointer;
+}
+.banner__logo{
+    height: 240px;
+}
 .banner .banner__text-box{   
-    background-color: rgb(255, 214, 153, .9);
-    max-width: 414px;
-    height: 414px;
+    animation: logo-animation 2s linear infinite alternate;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 300px;
+    height: 300px;
 
     border-radius: 50%;
     padding: 10px;

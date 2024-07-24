@@ -7,6 +7,7 @@ import { Footer } from "../footer/Footer";
 import { Dropdown } from 'primereact/dropdown';
 import { CardComponent } from "../card/CardComponent";
 import { Detail } from "../detail/Detail";
+import { WhatsappButton } from "../whatsapp-button/WhatsappButton";
 
 
 const Products = () => {
@@ -87,6 +88,12 @@ const Products = () => {
             </section>
 
             <Detail productId={selectedProduct} visible={visible} setVisibility={setVisibility} />
+
+            <br></br>
+            <div>
+                <Text primary={true}>¿Necesitas un servicio personalizado?</Text>
+                <WhatsappButton />
+            </div>
 
         </Container>     
         <Footer />   

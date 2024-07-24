@@ -5,7 +5,6 @@ import { FaWhatsapp } from "react-icons/fa";
 
 function WhatsappButton({ action }){
     const text = 'Hola, Moka, estoy interesado en una torta personalizada www.mokatortas.com';
-    const ecodedText = encodeURIComponent(text);
 
     return(
         <div>
