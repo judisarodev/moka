@@ -1,28 +1,82 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './products.css';
 import { Container } from "../container/Container";
 import { Title } from "../title/Title";
 import { Text } from "../text/Text";
 import { Footer } from "../footer/Footer";
 import { Dropdown } from 'primereact/dropdown';
+import { CardComponent } from "../card/CardComponent";
 
 
 const Products = () => {
     const [selectedCategory, setSelectedCategory] = useState('');
-    const categories = [
+    const [categories, setCategories] = useState([
       {
-        id: 1,
+        id: 0,
         name: 'Todas las categorías'
-      },
-      {
-        id: 2,
-        name: 'Amor'
-      },
-      {
-        id: 2,
-        name: 'Cumpleaños'
-      },
-    ];
+      }
+    ]);
+
+    const [cakes, setCakes] = useState([]);
+
+    useEffect(() => {
+        async function fetchCategories(){
+            try {
+                let url = 'https://backend.mokatortas.com/api/client/get-all-product-types';
+                if(selectedCategory.typeId !== 0){
+                    url = 'https://backend.mokatortas.com/api/client/get-all-product-types/' + selectedCategory.typeId;
+                }
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                const data = await response.json();
+                setCategories(data);
+            } catch (error) {
+                console.error('Error fetching categories:', error);
+            }
+        }
+        fetchCategories(); 
+    }, [selectedCategory]);
+
+    useEffect(() => {
+        async function fetchCategories(){
+            try {
+                const response = await fetch('https://backend.mokatortas.com/api/client/get-all-product-types', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                const data = await response.json();
+                setCategories(data);
+            } catch (error) {
+                console.error('Error fetching categories:', error);
+            }
+        }
+
+        async function fetchCakes(){
+            try {
+                const response = await fetch('https://backend.mokatortas.com/api/client/get-all-products', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                const data = await response.json();
+                setCakes(data);
+                console.log(data); 
+            } catch (error) {
+                console.error('Error fetching cakes:', error);
+            }
+        }
+
+        fetchCategories(); 
+        fetchCakes();
+    }, []);
+
     return(<>
         <Container>
             <div className="products__banner">
@@ -33,9 +87,19 @@ const Products = () => {
             </div>
 
             <section className="container">
-                <div>
+                <div className="article">
+                    <br></br>
                     <Dropdown value={selectedCategory} onChange={(e) => setSelectedCategory(e.value)} options={categories} optionLabel="name" 
-                    placeholder="Selecciona una categoría" className="w-full md:w-14rem products__input" />
+                    placeholder="Selecciona una categoría" className="w-full md:w-14rem products__input " />
+                    <br></br>
+                </div>
+
+                <div className="article products__cards-container">
+                    {
+                        cakes.map((cake) => {
+                            return <CardComponent title={cake.name} url={cake.fileName} />
+                        })
+                    }
                 </div>
             </section>
 

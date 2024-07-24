@@ -34,7 +34,7 @@ function Gallery({ title, text, typeId }) {
             console.log(products); 
             setProducts(arr);
         })
-        .catch((error) => console.log(error));;
+        .catch((error) => console.log(error));
     }, []);
 
     const responsiveOptions = [

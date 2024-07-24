@@ -18,3 +18,15 @@
     width: 50px;
     border: 0px;
 }
+.gallery__image:hover{
+    cursor: pointer; 
+    animation: card-animation 1s;
+}
+@keyframes card-animation {
+    from {
+        scale: 0.95;
+    }
+    to {
+        scale: 1;
+    }
+}

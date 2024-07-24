@@ -1,0 +1,36 @@
+.card__container{
+    display: flex;
+    padding: 30px 20px 30px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #F5F5F5;
+    border-radius: 10px;
+    margin: 10px;
+    width: 300px;
+}
+.card__container:hover{
+    cursor: pointer; 
+    animation: card-animation 1s;
+}
+@keyframes card-animation {
+    from {
+        scale: 0.95;
+    }
+    to {
+        scale: 1;
+    }
+}
+.card__image {
+    width: 250px;
+    height: 350px;
+    object-fit: cover; 
+}
+.card__title {
+    background-color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    color: #66CCFF;
+    text-transform: uppercase;
+}
