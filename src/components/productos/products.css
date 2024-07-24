@@ -9,11 +9,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: banner-animation 1s linear;
 }
 
 @media (width <= 758px) {
     .products__banner{
         width: 100%;
+    }
+}
+
+@keyframes banner-animation {
+    from{
+        transform: translateY(20%); 
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1; 
     }
 }
 

@@ -9,6 +9,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: banner-animation 1s linear;
+}
+
+@keyframes banner-animation {
+    from{
+        transform: translateY(20%); 
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1; 
+    }
 }
 
 @media (width <= 758px) {

@@ -67,8 +67,11 @@ const Products = () => {
             <section className="container">
                 <div className="article">
                     <br></br>
+                    <br></br>
+                    <br></br>
                     <Dropdown value={selectedCategory} onChange={(e) => setSelectedCategory(e.value)} options={categories} optionLabel="name" 
                     placeholder="Selecciona una categoría" className="w-full md:w-14rem products__input " />
+                    <br></br>
                     <br></br>
                 </div>
 
