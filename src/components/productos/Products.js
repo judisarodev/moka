@@ -28,13 +28,14 @@ const Products = () => {
                 });
                 const data = await response.json();
                 setCakes(data);
+                console.log(cakes); 
             } catch (error) {
                 console.error('Error fetching cakes:', error);
             }
         }
 
         fetchCakes();
-    }, []);
+    }, [selectedCategory]);
 
     useEffect(() => {
         async function fetchCategories(){
@@ -78,7 +79,7 @@ const Products = () => {
                 <div className="article products__cards-container">
                     {
                         cakes.map((cake) => {
-                            return <CardComponent productId={cake.productId} title={cake.name} fileName={cake.fileName}  />
+                            return <CardComponent key={cake.productId} productId={cake.productId} title={cake.name} fileName={cake.fileName}  />
                         })
                     }
                 </div>
