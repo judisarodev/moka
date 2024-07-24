@@ -93,14 +93,15 @@ const Detail = () => {
                             Detalles del pedido (opcional)
                             <InputTextarea value={detail} onChange={(e) => setDetail(e.target.value)} rows={5} cols={30} />
                         </Text>
-                        <a href={`https://wa.me/573027343613?text=${'Hola, Moka, estoy interesado en la torta https://mokatortas.com/detalle/'}${productId}${date ? ' Fecha: ' + date.toLocaleDateString('es-ES', {day: '2-digit', month: '2-digit', year: 'numeric'}) : ''}${detail ? ' Especificaciones: '+ detail : ''}`} target="_blank" rel="noreferrer">
-                            <button className="whatsapp-button">
+                        
+                        <button className="whatsapp-button">
+                            <a href={`https://wa.me/573027343613?text=${'Hola, Moka, estoy interesado en la torta https://mokatortas.com/detalle/'}${productId}${date ? ' Fecha: ' + date.toLocaleDateString('es-ES', {day: '2-digit', month: '2-digit', year: 'numeric'}) : ''}${detail ? ' Especificaciones: '+ detail : ''}`} target="_blank" rel="noreferrer">
                                 <div className="d-flex align-items-center gap-1">
                                     <FaWhatsapp size={25}/>
                                     Ordenar por Whatsapp
                                 </div>
-                            </button>
-                        </a>
+                            </a>
+                        </button>
                     </div>
                 </div>
             </section>
