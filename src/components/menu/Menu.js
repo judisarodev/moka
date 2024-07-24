@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { IoIosMenu } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 import './menu.css';
 import { Context } from "../../context/ContextProvider";
-import { Image } from "react-bootstrap";
 import logo from './../../assets/marca/logo.png';
 
 const menuOptions = [

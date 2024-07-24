@@ -3,10 +3,13 @@ import { Title } from "../title/Title";
 import { Text } from "../text/Text";
 import './gallery.css';
 import { Carousel } from 'primereact/carousel';
+import { useNavigate } from "react-router-dom";
 
-const productTemplate = (product) => {
+const ProductTemplate = (product) => {
+    const navigate = useNavigate();
+    const url = `/detalle/${ product.id }`;
     return (
-        <div className="product-item">
+        <div className="product-item" onClick={() => navigate(url)}>
             <div className="product-image" style={{height: '600px', minWidth: '320px', padding:'20px'}}>
                 <img style={{border: '1px gray solid'}} src={product.image} alt={`Product ${product.id}`}className="gallery__image"/>
             </div>
@@ -31,7 +34,6 @@ function Gallery({ title, text, typeId }) {
             for(const d of data){
                 arr.push({ id: d.productId, image: 'https://backend.mokatortas.com/images/' + d.fileName});
             }
-            console.log(products); 
             setProducts(arr);
         })
         .catch((error) => console.log(error));
@@ -74,7 +76,7 @@ function Gallery({ title, text, typeId }) {
                 responsiveOptions={responsiveOptions}
                 circular
                 autoplayInterval={6000} 
-                itemTemplate={productTemplate} 
+                itemTemplate={ProductTemplate} 
             />
         </article>
     );

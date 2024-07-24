@@ -1,6 +1,40 @@
-.sidebar__container{
-    background-color: white;
+.detail__categories-list {
+    list-style-type: none;
+    padding: 0px;
+    margin-left: 10%; 
+    display: flex;
+    flex-wrap: wrap; 
 }
-.sidebar__image{
-    height: 600px;
+.detail__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.detail__image-container{
+    display: flex;
+    justify-content: center;
+    max-height: 700px;
+}
+.detail__image{
+    max-height: 700px;
+    object-fit: contain;
+}
+.detail__info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    max-height: 700px;
+}
+.detail__type{
+    font-size:0.9rem;
+    display: inline;
+    padding: 0px;
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    margin-right: 10px; 
+    background-color: #FFD699;
+    font-weight: 400;
+    border-radius: 10px;
+    padding: 6px;
+    color: black;
 }

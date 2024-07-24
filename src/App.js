@@ -5,20 +5,26 @@ import { Home } from './components/home/Home';
 import { ContextProvider } from './context/ContextProvider';
 import { About } from './components/about/About';
 import { Products } from './components/productos/Products';
+import { Detail } from './components/detail/Detail';
+import { PrimeReactProvider } from 'primereact/api';
+import "primereact/resources/themes/lara-light-cyan/theme.css";
 
 function App() {
   return (
     <div className="App">
-      <ContextProvider>
-        <BrowserRouter>
-          <Menu/>
-          <Routes>
-            <Route path='/' element={<Home />}/>
-            <Route path='/productos' element={<Products />}/>
-            <Route path='/sobre-nosotros' element={<About />}/>
-          </Routes>
-        </BrowserRouter>
-      </ContextProvider>
+      <PrimeReactProvider>
+        <ContextProvider>
+          <BrowserRouter>
+            <Menu/>
+            <Routes>
+              <Route path='/' element={<Home />}/>
+              <Route path='/productos' element={<Products />}/>
+              <Route path='/sobre-nosotros' element={<About />}/>
+              <Route path='/detalle/:productId' element={<Detail />}/>
+            </Routes>
+          </BrowserRouter>
+        </ContextProvider>
+      </PrimeReactProvider>
     </div>
   );
 }
