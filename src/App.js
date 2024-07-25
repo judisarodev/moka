@@ -21,6 +21,7 @@ function App() {
               <Route path='/productos' element={<Products />}/>
               <Route path='/sobre-nosotros' element={<About />}/>
               <Route path='/detalle/:productId' element={<Detail />}/>
+              <Route path='*' element={<Home />}/>
             </Routes>
           </BrowserRouter>
         </ContextProvider>
