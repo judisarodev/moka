@@ -55,7 +55,6 @@
 }
 
 .products__input{
-    min-width: 50%;
     height: 60px;
     display: flex;
     align-items: center;
@@ -63,8 +62,11 @@
     border: solid 1px #666666;
     border-radius: 10px;
     padding: 0px 10px 0px 10px;
+    margin: 0px 10% 0px 10%; 
 }
-
+.products__label{
+    margin: 0px 10% 10px 10%; 
+}
 .p-dropdown-items-wrapper{
     border: 2px solid transparent; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

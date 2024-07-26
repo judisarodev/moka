@@ -70,6 +70,7 @@ const Products = () => {
                     <br></br>
                     <br></br>
                     <br></br>
+                    <label className="products__label">Elige una categoría</label>
                     <Dropdown value={selectedCategory} onChange={(e) => setSelectedCategory(e.value)} options={categories} optionLabel="name" 
                     placeholder="Selecciona una categoría" className="w-full md:w-14rem products__input " />
                     <br></br>
