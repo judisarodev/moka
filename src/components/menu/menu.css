@@ -2,6 +2,12 @@
     transition: height 0.3s;
     overflow: hidden;
 }
+.menu__title{
+    letter-spacing: 4px;
+}
+.menu__title:hover{
+    cursor: pointer;
+}
 .main-menu {
     color: white;
     padding-left: 22px;

@@ -10,7 +10,7 @@ const ProductTemplate = (product) => {
     const url = `/detalle/${ product.id }`;
     return (
         <div className="product-item" onClick={() => navigate(url)}>
-            <div className="product-image" style={{height: '600px', minWidth: '320px', padding:'20px'}}>
+            <div className="product-image" style={{height: '600px', minWidth: '250px', padding:'20px'}}>
                 <img style={{border: '1px gray solid'}} src={product.image} alt={`Product ${product.id}`}className="gallery__image"/>
             </div>
         </div>

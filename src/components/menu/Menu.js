@@ -42,7 +42,7 @@ function Menu(){
     }
 
     const menuStyles = {
-        height: windowSize === windowSizes.SMALL && isOpen ? '110vh' : '130px',
+        height: windowSize === windowSizes.SMALL && isOpen ? '110vh' : '90px',
         backgroundColor: '#E08492'
     };
 
@@ -50,7 +50,7 @@ function Menu(){
         <nav className="container-fluid menu-container" style={ menuStyles }>
             <div className="d-flex flex-row align-items-center main-menu">
 
-                <div className="d-flex w-100 align-items-center justify-content-between" style={{height: '130px'}}>
+                <div className="d-flex w-100 align-items-center justify-content-between" style={{height: '90px'}}>
                     <div className="d-flex align-items-center">
                         {windowSize === windowSizes.SMALL && <div className="clickable d-flex align-items-center" onClick={ hideShowDropDownMenu }>
                             { isOpen ? <IoCloseOutline color="white" size={30} className="main-menu__icon"/> : <IoIosMenu size={30} color="white" className="main-menu__icon"/> }
@@ -68,8 +68,8 @@ function Menu(){
                         </div> }
                     </div>
 
-                    <div className="align-self-center">
-                        <img src={logo} alt="Logo" width={120} style={{paddingBottom: '20px'}}/>
+                    <div className="align-self-center menu__title">
+                        <strong>MOKA</strong>
                     </div>
                 </div>
             </div>

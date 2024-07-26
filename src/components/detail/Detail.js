@@ -12,6 +12,7 @@ import { InputTextarea } from 'primereact/inputtextarea';
 import { locale, addLocale } from 'primereact/api';
 import { Gallery } from "../gallery/Gallery";
 import { FaWhatsapp } from "react-icons/fa";
+import { WhatsappButton } from "../whatsapp-button/WhatsappButton";
 
 const Detail = () => {
 
@@ -86,22 +87,17 @@ const Detail = () => {
                         </ul>
                         <Text>
                             ¿Para qué fechas la necesitas? (opcional)
+                            <br></br>
                             <Calendar minDate={today} dateFormat="dd/mm/yy" touchUI  value={date} onChange={(e) => setDate(e.value)} />
                         </Text>
 
                         <Text>
                             Detalles del pedido (opcional)
+                            <br></br>
                             <InputTextarea value={detail} onChange={(e) => setDetail(e.target.value)} rows={5} cols={30} />
                         </Text>
                         
-                        <button className="whatsapp-button">
-                            <a href={`https://wa.me/573027343613?text=${'Hola, Moka, estoy interesado en la torta https://mokatortas.com/detalle/'}${productId}${date ? ' Fecha: ' + date.toLocaleDateString('es-ES', {day: '2-digit', month: '2-digit', year: 'numeric'}) : ''}${detail ? ' Especificaciones: '+ detail : ''}`} target="_blank" rel="noreferrer">
-                                <div className="d-flex align-items-center gap-1">
-                                    <FaWhatsapp size={25}/>
-                                    Ordenar por Whatsapp
-                                </div>
-                            </a>
-                        </button>
+                        <WhatsappButton bntText={'Ordenar por Whatsapp'} link={`https://wa.me/573027343613?text=${'Hola, Moka, estoy interesado en la torta https://mokatortas.com/detalle/'}${productId}${date ? ' Fecha: ' + date.toLocaleDateString('es-ES', {day: '2-digit', month: '2-digit', year: 'numeric'}) : ''}${detail ? ' Especificaciones: '+ detail : ''}`}/> 
                     </div>
                 </div>
             </section>
