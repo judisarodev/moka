@@ -20,8 +20,6 @@ function Home(){
         { index: '3', text: 'Disfruta de Moka con quienes más amas y aprecias' }
     ];
 
-    const text = 'Hola, Moka, estoy interesado en una torta personalizada www.mokatortas.com';
-
     return(
         <Container>
             <div className="banner" >
