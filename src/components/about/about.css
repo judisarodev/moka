@@ -9,12 +9,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: banner-animation 1s linear;
 }
-
 @keyframes banner-animation {
     from{
-        transform: translateY(20%); 
+        transform: translateY(5%); 
         opacity: 0;
     }
     to {

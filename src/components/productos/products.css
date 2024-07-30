@@ -12,7 +12,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: banner-animation 1s linear;
 }
 
 @media (width <= 758px) {
