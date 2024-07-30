@@ -3,17 +3,22 @@ import './whatsappButton.css';
 import { FaWhatsapp } from "react-icons/fa";
 
 
-function WhatsappButton({ bntText, link }){
+function WhatsappButton({ bntText, link , margin = true, small = true}){
     const shortLink = 'https://wa.me/573027343613?text=Hola, Moka, estoy interesado en una torta personalizada www.mokatortas.com';
+    const sytles = {
+        fontSize: small ? '0.9rem' : '1.2rem',
+        fontWeight: small ? '200' : '600',
+        margin: margin ? '10px 10% 10px 10%' : '0px',
+    }
     return(
         <div>
-            <button className="whatsapp-button">
-                <a href={link ? link : shortLink} target="_blank" rel="noreferrer" className="whatsappbtn__link">
+            <button onClick={() => { window.open(link ? link : shortLink) }} className="whatsapp-button" style={sytles}>
+                
                     <div className="d-flex align-items-center gap-1">
-                        <FaWhatsapp size={25}/>
+                        <FaWhatsapp size={small ? 25 : 35}/>
                         { bntText ? bntText : 'Hablemos por Whatsapp' }
                     </div>
-                </a>    
+                
             </button>
         </div>
     );

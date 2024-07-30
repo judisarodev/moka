@@ -4,7 +4,6 @@ import { IoIosMenu } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 import './menu.css';
 import { Context } from "../../context/ContextProvider";
-import logo from './../../assets/marca/logo.png';
 
 const menuOptions = [
     { name: 'Inicio', url: '/' },
@@ -68,8 +67,8 @@ function Menu(){
                         </div> }
                     </div>
 
-                    <div className="align-self-center menu__title">
-                        <strong>MOKA</strong>
+                    <div onClick={() => { navigate('/') }} className="align-self-center menu__title">
+                        <strong >MOKA</strong>
                     </div>
                 </div>
             </div>

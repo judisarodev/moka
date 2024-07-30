@@ -1,0 +1,29 @@
+.btn-wsp{
+    position:fixed;
+    width: 60px;
+    height: 60px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #0df053;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size:30px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index: 999;
+    animation: btn-wsp-animation 5s infinite;
+  }
+  
+  .btn-wsp:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+  @keyframes btn-wsp-animation {
+    0%{
+      box-shadow: 0 0 0 0 #E08492;
+    }
+    100%{
+      box-shadow: 0 0 0 20px rgba(198, 75, 75, 0);
+    }
+  }

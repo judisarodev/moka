@@ -1,11 +1,9 @@
 .whatsapp-button{
     border: 0px;
-    margin: 0px 10% 20px 10%;
     padding: 10px;
     background-color: #25D366;
     color: white;
     border-radius: 10px;
-    font-size: 0.9rem;
 }
 .whatsappbtn__link{
     color: white;

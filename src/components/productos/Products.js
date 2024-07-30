@@ -87,10 +87,10 @@ const Products = () => {
             </section>
 
             <br></br>
-            <div>
-                <Text primary={true}>¿Necesitas un servicio personalizado?</Text>
-                <WhatsappButton />
-            </div>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
 
         </Container>     
         <Footer />   

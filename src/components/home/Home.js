@@ -26,22 +26,27 @@ function Home(){
                 <div className="banner__text-box">
                     <img onClick={() => { cakesRef.current.scrollIntoView({ behavior: 'smooth' }) }} src={logo} alt='logo' className='banner__logo'/>
                 </div>
+                <div className='banner__title'>
+                    <WhatsappButton bntText={'Orderna tu torta personalizada'} margin={false} small={false}/>
+                </div>
             </div>
 
-            <section className="container">
-                <Title>¿Quieres sorprender a alguien que amas?</Title>
-                <Text>
-                ¡Bienvenidos a Moka! Donde la magia se mezcla con la harina, creamos delicias que te harán sonreír.
-                En Moka, cada bocado cuenta una historia de amor. 
-                </Text>
-                
-                <br></br>
-                <ul className='p-0'>
-                    {listItems.map((i) => {
-                        return <ListItem key={i.index} index={i.index} text={i.text}/>
-                    })}    
-                </ul>
-            </section>
+            <div className='home_steps'>
+                <section className="container">
+                    <Title><h1>Tortas personalizadas en Bucaramanga</h1></Title>
+                    <Text>
+                    ¡Bienvenidos a Moka! Donde la magia se mezcla con la harina, creamos delicias que te harán sonreír.
+                    En Moka, cada bocado cuenta una historia de amor. 
+                    </Text>
+                    
+                    <br></br>
+                    <ul className='p-0'>
+                        {listItems.map((i) => {
+                            return <ListItem key={i.index} index={i.index} text={i.text}/>
+                        })}    
+                    </ul>
+                </section>
+            </div>
             
             <section ref={cakesRef}>
                 <Gallery title={'Tortas temáticas '} text={'Cumpleaños, fiestas, primeras comuniones y más.'} typeId={6}/>
@@ -49,17 +54,23 @@ function Home(){
                 <Gallery title={'Deportes '} text={'Revive la emoción del football y el deporte'} typeId={7}/>
             </section>
 
-            <section className="container">
-                <Title>Preguntas frecuentes</Title>
-                <br></br>
-                <FrecuentQuestion question={'¿Qué métodos de pago son aceptados?'} answer={'Aceptamos distintos métodos de pago como: efectivo, Nequi y Daviplata.'}/>
-                <FrecuentQuestion question={'¿Es necesario hacer un depósito?'} answer={'Sí, al momento de confirmar la torta o postre, debes realizar un depósito de al menos el 40% de la compra. '}/>
-                <FrecuentQuestion question={'¿Las tortas se entregan a domicilio?'} answer={'Por supuesto, tu pedido puede ser entregado en Bucaramanga, Floridablanca o Girón. '}/>
-                <div>
-                    <FrecuentQuestion question={'¿Tienes más preguntas?'}/>
-                    <WhatsappButton />
-                </div>
-            </section>
+            <div className='fak__background'>
+                <section className="container">
+                    <Title>Preguntas frecuentes</Title>
+                    <br></br>
+                    <FrecuentQuestion question={'¿Qué métodos de pago son aceptados?'} answer={'Aceptamos distintos métodos de pago como: efectivo, Nequi y Daviplata.'}/>
+                    <FrecuentQuestion question={'¿Es necesario hacer un depósito?'} answer={'Sí, al momento de confirmar la torta o postre, debes realizar un depósito de al menos el 40% de la compra. '}/>
+                    <FrecuentQuestion question={'¿Las tortas se entregan a domicilio?'} answer={'Por supuesto, tu pedido puede ser entregado en Bucaramanga, Floridablanca o Girón. '}/>
+                    <div>
+                        <FrecuentQuestion question={'¿Tienes más preguntas?'}/>
+                        <WhatsappButton />
+                    </div>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    
+                </section>
+            </div>
             <Footer />
         </Container>
     );

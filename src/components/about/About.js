@@ -4,7 +4,6 @@ import { Footer } from '../footer/Footer';
 import { Container } from "../container/Container";
 import { Title } from '../title/Title';
 import { Text } from '../text/Text';
-import { WhatsappButton } from '../whatsapp-button/WhatsappButton';
 
 const Value = ({ title, text }) => {
     return(<>
@@ -85,10 +84,12 @@ const About = () => {
                     }
                 </ul>
 
-                <div>
-                    <Text primary={true}>¿Tienes más preguntas?</Text>
-                    <WhatsappButton />
-                </div>
+
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
             </section>
         </Container>     
         <Footer />   

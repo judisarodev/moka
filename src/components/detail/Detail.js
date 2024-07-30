@@ -94,7 +94,7 @@ const Detail = () => {
                         <Text>
                             Detalles del pedido (opcional)
                             <br></br>
-                            <InputTextarea value={detail} onChange={(e) => setDetail(e.target.value)} rows={5} cols={30} />
+                            <InputTextarea maxLength={140} value={detail} onChange={(e) => setDetail(e.target.value)} rows={5} cols={30} />
                         </Text>
                         
                         <WhatsappButton bntText={'Ordenar por Whatsapp'} link={`https://wa.me/573027343613?text=${'Hola, Moka, estoy interesado en la torta https://mokatortas.com/detalle/'}${productId}${date ? ' Fecha: ' + date.toLocaleDateString('es-ES', {day: '2-digit', month: '2-digit', year: 'numeric'}) : ''}${detail ? ' Especificaciones: '+ detail : ''}`}/> 

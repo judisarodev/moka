@@ -8,6 +8,7 @@ import { Products } from './components/productos/Products';
 import { Detail } from './components/detail/Detail';
 import { PrimeReactProvider } from 'primereact/api';
 import "primereact/resources/themes/lara-light-cyan/theme.css";
+import { FloatingActionButton } from './components/floating-action-button/FloatingActionButton';
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
           </BrowserRouter>
         </ContextProvider>
       </PrimeReactProvider>
+      
+      <FloatingActionButton />
     </div>
   );
 }
