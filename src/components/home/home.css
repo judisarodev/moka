@@ -46,7 +46,6 @@ section {
     height: 240px;
 }
 .banner .banner__text-box{   
-    animation: logo-animation 2s linear infinite alternate;
     display: flex;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.9);
