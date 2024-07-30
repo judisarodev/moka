@@ -22,7 +22,7 @@ section {
     text-align: center;
     background-color: white;
     border-radius: 10px;
-    padding-bottom: 1px;
+    padding: 1px;
 }
 @keyframes banner-animation-home {
     from{

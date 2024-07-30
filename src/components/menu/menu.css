@@ -9,7 +9,7 @@
     cursor: pointer;
 }
 .main-menu {
-    color: white;
+    color: #121212;
     padding-left: 22px;
     padding-right: 22px;
 }
@@ -52,6 +52,10 @@
     }
 }
 .nav-item > p {
+    color: #121212;
+    font-weight: 500;
+}
+
+.nav-item > p:hover {
     color: white;
-    
 }

@@ -27,7 +27,7 @@ function Home(){
                     <img onClick={() => { cakesRef.current.scrollIntoView({ behavior: 'smooth' }) }} src={logo} alt='logo' className='banner__logo'/>
                 </div>
                 <div className='banner__title'>
-                    <WhatsappButton bntText={'Orderna tu torta personalizada'} margin={false} small={false}/>
+                    <WhatsappButton bntText={'Ordernar por Whatsapp'} margin={false} small={false}/>
                 </div>
             </div>
 
