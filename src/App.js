@@ -7,8 +7,8 @@ import { About } from './components/about/About';
 import { Products } from './components/productos/Products';
 import { Detail } from './components/detail/Detail';
 import { PrimeReactProvider } from 'primereact/api';
-import "primereact/resources/themes/lara-light-cyan/theme.css";
 import { FloatingActionButton } from './components/floating-action-button/FloatingActionButton';
+import "primereact/resources/themes/lara-light-cyan/theme.css";
 
 function App() {
   return (
