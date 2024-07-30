@@ -11,7 +11,6 @@ import { Calendar } from 'primereact/calendar';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { locale, addLocale } from 'primereact/api';
 import { Gallery } from "../gallery/Gallery";
-import { FaWhatsapp } from "react-icons/fa";
 import { WhatsappButton } from "../whatsapp-button/WhatsappButton";
 
 const Detail = () => {

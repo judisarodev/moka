@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import './products.css';
 import { Container } from "../container/Container";
-import { Text } from "../text/Text";
 import { Footer } from "../footer/Footer";
 import { Dropdown } from 'primereact/dropdown';
 import { CardComponent } from "../card/CardComponent";
-import { WhatsappButton } from "../whatsapp-button/WhatsappButton";
 
 
 const Products = () => {
