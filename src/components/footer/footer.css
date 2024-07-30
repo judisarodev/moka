@@ -1,5 +1,13 @@
 .footer {
     background-color: #FF66B2;
-    padding: 100px 10% 20px 10%;
+    padding: 50px;
     color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.footer-item {
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
 }

@@ -54,7 +54,7 @@ const Products = () => {
         fetchCategories(); 
     }, []);
 
-    return(<>
+    return(<div className="products__main-container">
         <Container>
             <div className="products__banner">
                 <div className="banner__text-box d-flex flex-column justify-content-center  ">
@@ -92,7 +92,7 @@ const Products = () => {
 
         </Container>     
         <Footer />   
-    </>);
+    </div>);
 }
 
 export { Products }; 

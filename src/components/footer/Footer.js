@@ -6,19 +6,26 @@ import './footer.css';
 
 function Footer(){
     return(
-        <footer className="footer d-flex flex-column gap-3">
-            <FooterItem icon={<FaRegCopyright size={20}/>} text={'Copyright. Moka, marca registrada'}/>
-            <FooterItem icon={<FaInstagram size={20} />} text={'@moka-bga'}/>
-            <FooterItem icon={<FaPhoneAlt size={20} />} text={'+57 302 7343613'}/>
+        <footer className="footer">
+            <FooterItem icon={<FaRegCopyright size={30}/>} text={'copyright Moka'}/>
+            <FooterItem action={() => { window.open('https://www.instagram.com/moka_bga/') }} icon={<FaInstagram size={30} />} text={'@moka-bga'}/>
+            <FooterItem icon={<FaPhoneAlt size={30} />} text={'+57 302 7343613'}/>
         </footer>
     );
 }
 
-function FooterItem({ icon, text }){
+function FooterItem({ icon, text, action }){
+    const hoverStyle = {
+        cursor: action ? 'pointer' : ''
+    }
     return(
-        <div className="d-flex align-items-center gap-3">
-            { icon }
-            { text }
+        <div onClick={action} style={hoverStyle} className="footer-item d-flex align-items-center gap-3">
+            <div>
+                { icon }
+            </div>
+            <div>
+                { text }
+            </div>
         </div>
     );
 }

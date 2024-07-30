@@ -1,3 +1,6 @@
+.products__main-container{
+    background-color: rgb(255, 250, 250);
+}
 .products__banner{
     background-size: cover;
 
