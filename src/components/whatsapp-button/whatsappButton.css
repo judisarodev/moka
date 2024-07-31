@@ -1,14 +1,14 @@
 .whatsapp-button{
     border: 0px;
     padding: 10px;
-    background-color: #E08492;
-    color: #2B2B2B;
+    background-color: #FF66B2;
+    color: white;
     border-radius: 10px;
 }
 .whatsapp-button:hover{
     color: white;
 }
 .whatsappbtn__link{
-    color: white;
+    color: 'white';
     text-decoration: none;
 }
